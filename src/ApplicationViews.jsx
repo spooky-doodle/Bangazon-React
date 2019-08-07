@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from "react-router"
 import { Route, Redirect } from "react-router-dom"
-import StrangerBeats from './components/strangerBeats/StrangerBeats'
 import './applicationViews.css'
 
 class ApplicationViews extends Component {
@@ -9,7 +8,7 @@ class ApplicationViews extends Component {
         return (
             <>
                 <Route exact path="/" render={(props) => {
-                    return <StrangerBeats />
+                    return null;
                 }} />
 
             </>

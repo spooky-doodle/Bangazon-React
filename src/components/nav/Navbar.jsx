@@ -9,13 +9,13 @@ export default class Navbar extends Component {
                 <Menu borderless size='massive' inverted fixed='top' color="black" style={{ minHeight: 80 }}>
                     <Container>
                         <Menu.Item as='a' href='/' className='logo-name'>
-                            Beat-Box
+                            Bangazon
                         </Menu.Item>
                         <Menu.Item position='right'>
-                            <Dropdown item simple text='Select Kit'>
+                            <Dropdown item simple text='Select Data'>
                                 <Dropdown.Menu>
                                     <Dropdown.Item as='a' href='/'>
-                                        Stranger Beats
+                                        Item 1
                                     </Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
