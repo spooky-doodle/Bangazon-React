@@ -17,6 +17,9 @@ export default class Navbar extends Component {
                                     <Dropdown.Item as='a' href='/'>
                                         Item 1
                                     </Dropdown.Item>
+                                    <Dropdown.Item as='a' href='/employees'>
+                                        Employees
+                                    </Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
                         </Menu.Item>
