@@ -3,7 +3,7 @@ import { withRouter } from "react-router"
 import Navbar from './components/nav/Navbar'
 import ApplicationViews from './ApplicationViews';
 
-class BeatBox extends Component {
+class Bangazon extends Component {
     render() {
         return (
             <div>
@@ -14,4 +14,4 @@ class BeatBox extends Component {
     }
 }
 
-export default withRouter(BeatBox)
+export default withRouter(Bangazon)

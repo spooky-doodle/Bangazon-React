@@ -1,0 +1,32 @@
+.products-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(243, 243, 243);
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    height: 450px;
+    border-radius: 5px;
+    box-shadow: 8px 8px 16px -11px rgba(0,0,0,0.37);
+    padding: 20px;
+    margin: 15px;
+    background-color: white;
+}
+
+.product-card-img {
+    object-fit: contain;
+    overflow: hidden;
+}
+
+
+.img-actual {
+    width: 100%;
+    height: auto;
+}
