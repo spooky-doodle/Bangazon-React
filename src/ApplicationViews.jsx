@@ -9,7 +9,11 @@ class ApplicationViews extends Component {
         return (
             <>
                 <Route exact path="/" render={(props) => {
-                    return <Storefront/>;
+                    return <Storefront {...props}/>;
+                }} />
+
+                <Route exact path="/products/:id" render={(props) => {
+                    return <detailView {...props}/>;
                 }} />
 
             </>

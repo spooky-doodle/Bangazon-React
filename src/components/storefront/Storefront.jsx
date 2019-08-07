@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import ProductCard from "../productcard/ProductCard";
+import { withRouter } from "react-router"
+import { Route, Redirect, withRouter as router2 } from "react-router-dom"
 import {Products, Orders, Customers, Employees} from '../../modules/Endpoints';
+import {Container, Card, Button} from "semantic-ui-react";
 
 export default class Storefront extends Component {
     state = {
@@ -8,25 +11,23 @@ export default class Storefront extends Component {
     };
 
     async componentDidMount() {
-        console.log(await Products.getAll());
-        console.log(await Employees.getAll());
-        console.log(await Orders.getAll());
-        console.log(await Customers.getAll());
         Products.getAll()
-       .then((products) => this.setState({products}));
+        .then((products) => this.setState({products}));
     }
 
+    // className='products-container'
     render() {
         return (
-            <div className='storefront-container'>
-                <div className='products-container'>
+            <Container centered style={{maxWidth: '960px'}} >
+                <Card.Group  centered style={{marginTop: '20px'}}>
                     {
                         this.state.products.map(prod => {
-                            return <ProductCard product={prod} key={prod.id}/>
+                            return <ProductCard product={prod} key={prod.id} />
                         })
                     }
-                </div>
-            </div>
+                </Card.Group>
+                
+            </Container>
         )
     }
 }
