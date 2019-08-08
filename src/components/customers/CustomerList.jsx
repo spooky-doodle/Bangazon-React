@@ -12,7 +12,6 @@ export const CustomerList = (props) => {
     
   }, []);
 
-  console.log(customers);
 
 
 
