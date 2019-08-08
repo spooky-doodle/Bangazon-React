@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Menu, Dropdown, Container, DropdownItem } from 'semantic-ui-react'
+import { Menu, Dropdown, Container, Image } from 'semantic-ui-react'
 import './navbar.css'
+import bangazonLogo from "../../img/bangazon_logo.svg";
 
 export default class Navbar extends Component {
     render() {
@@ -8,8 +9,8 @@ export default class Navbar extends Component {
             <div className='navbar'>
                 <Menu borderless size='massive' inverted fixed='top' color="black" style={{ minHeight: 80 }}>
                     <Container>
-                        <Menu.Item as='a' href='/' className='logo-name'>
-                            Bangazon
+                        <Menu.Item className="nav-logo-container">
+                            <Image src={bangazonLogo} id="bang-logo"></Image>
                         </Menu.Item>
                         <Menu.Item position='right'>
                             <Dropdown item simple text='Select Data'>

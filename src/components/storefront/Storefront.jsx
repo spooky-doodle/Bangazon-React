@@ -1,32 +1,23 @@
 import React, { Component } from 'react'
 import ProductCard from "../productcard/ProductCard";
-import {Products, Orders, Customers, Employees} from '../../modules/Endpoints';
+import {Container, Card, Button} from "semantic-ui-react";
 
 export default class Storefront extends Component {
-    state = {
-        products: [],
-    };
+    
 
-    async componentDidMount() {
-        console.log(await Products.getAll());
-        console.log(await Employees.getAll());
-        console.log(await Orders.getAll());
-        console.log(await Customers.getAll());
-        Products.getAll()
-       .then((products) => this.setState({products}));
-    }
-
+    // className='products-container'
     render() {
         return (
-            <div className='storefront-container'>
-                <div className='products-container'>
+            <Container centered="true" style={{maxWidth: '960px'}} >
+                <Card.Group centered  style={{marginTop: '20px'}}>
                     {
-                        this.state.products.map(prod => {
-                            return <ProductCard product={prod} key={prod.id}/>
+                        this.props.products.map(prod => {
+                            return <ProductCard product={prod} key={prod.id} {...this.props} />
                         })
                     }
-                </div>
-            </div>
+                </Card.Group>
+                
+            </Container>
         )
     }
 }

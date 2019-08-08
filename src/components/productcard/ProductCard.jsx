@@ -1,23 +1,30 @@
 import React, { Component } from 'react'
 import ProdImg from "../../img/productImage01.png";
 import "../../styles/card.css";
+import {Card, Image, Button} from "semantic-ui-react";
 
 
 export default class ProductCard extends Component {
+
+    viewProductDetail = () => {
+        this.props.history.push(`/products/${this.props.product.id}`);
+    }
+
+
     render() {
         return (
-            <div className='card-container' >
-                <div className='product-card-img'>
-                    <img src={ProdImg} alt='product-img' className="img-actual"></img>
+            <Card >
+                <div >
+                    <Image src={ProdImg} alt='product-img'></Image>
                 </div>
-                <div className='product-card-txt'>
+                <Card.Content >
                     <h2>{this.props.product.title}</h2>
                     <p>{this.props.product.description}</p>
                     <p>$ {this.props.product.price}</p>
                     <p>Qty: {this.props.product.quantity}</p>
-                    
-                </div>
-            </div>
+                    <Button onClick={this.viewProductDetail}>View Details</Button>
+                </Card.Content>
+            </Card>
         )
     }
 }
