@@ -7,7 +7,7 @@ import {Card, Image, Button} from "semantic-ui-react";
 export default class ProductCard extends Component {
 
     viewProductDetail = () => {
-        this.props.history.push('/');
+        this.props.history.push(`/products/${this.props.product.id}`);
     }
 
 

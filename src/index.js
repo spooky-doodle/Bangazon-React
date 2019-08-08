@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { withRouter } from 'react-router'
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Redirect } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css'
@@ -15,3 +14,4 @@ ReactDOM.render(
     </Router>,
     document.getElementById("root")
 );
+
