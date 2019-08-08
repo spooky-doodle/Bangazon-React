@@ -3,6 +3,7 @@ import { withRouter } from "react-router"
 import { Route, Redirect } from "react-router-dom"
 import './applicationViews.css'
 import Storefront from "./components/storefront/Storefront";
+import Employee from "./components/employees/Employee"
 import DetailView from "./components/productcard/DetailView";
 import {Products, Orders, Customers, Employees} from './modules/Endpoints.jsx';
 import OrdersView from "./components/orders/orders";
@@ -41,6 +42,10 @@ class ApplicationViews extends Component {
                     return <CustomerDetail id={parseInt(props.match.params.custId)} {...props}/>;
                 }} />
                 
+
+                <Route exact path="/employees" render={(props) => {
+                    return <Employee/>;
+                }} />
 
             </>
         )

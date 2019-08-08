@@ -36,6 +36,9 @@ class Navbar extends Component {
                                         <Dropdown.Item as='a' onClick={() => this.props.history.push("/customers")}>
                                             Customers
                                         </Dropdown.Item>
+                                        <Dropdown.Item as='a' onClick={() => this.props.history.push("/employees")}>
+                                        Employees
+                                        </Dropdown.Item>
                                         <Dropdown.Item as='a' onClick={() => this.props.history.push("/orders")}>
                                             Orders
                                         </Dropdown.Item> 
