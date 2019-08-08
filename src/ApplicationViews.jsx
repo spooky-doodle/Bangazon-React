@@ -5,7 +5,7 @@ import './applicationViews.css'
 import Storefront from "./components/storefront/Storefront";
 import DetailView from "./components/productcard/DetailView";
 import {Products, Orders, Customers, Employees} from './modules/Endpoints.jsx';
-
+import OrdersView from "./components/orders/orders";
 import { CustomerList } from "./components/customers/CustomerList";
 import { CustomerDetail } from "./components/customers/CustomerDetail";
 
@@ -31,8 +31,8 @@ class ApplicationViews extends Component {
                 <Route exact path="/products/:id(\d+)" render={(props) => {
                     return <DetailView {...props} id={parseInt(props.match.params.id)}/>;
                 }} />
-                <Route exact path="/Orders" render={(props) => {
-                    return <Orders/>;
+                <Route exact path="/orders" render={(props) => {
+                    return <OrdersView {...props}/>;
                 }} />
                 <Route exact path="/customers" render={(props) => {
                     return <CustomerList {...props}/>;

@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import OrderCard from "./ordersCard";
 import {Products, Orders, Customers, Employees} from '../../modules/Endpoints';
 import { Container, Card } from "semantic-ui-react";
-export default class Storefront extends Component {
+
+
+export default class OrderView extends Component {
     state = {
         orders: [],
         ordersReady: false,
