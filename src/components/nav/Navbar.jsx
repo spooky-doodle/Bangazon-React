@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { Menu, Dropdown, Container, Button, Label } from 'semantic-ui-react'
+import { Menu, Dropdown, Container, Button, Label, Image } from 'semantic-ui-react'
 import './navbar.css'
 import { LoginModal  } from '../LoginModal';
 import { withRouter } from "react-router"
+import bangazonLogo from "../../img/bangazon_logo.svg";
 
 class Navbar extends Component {
 
@@ -22,8 +23,8 @@ class Navbar extends Component {
             <div className='navbar'>
                 <Menu borderless size='massive' inverted fixed='top' color="black" style={{ minHeight: 80 }}>
                     <Container>
-                        <Menu.Item as='a' onClick={() => this.props.history.push("/")} className='logo-name'>
-                            Bangazon
+                        <Menu.Item as='a' onClick={() => this.props.history.push("/")} className="nav-logo-container">
+                            <Image src={bangazonLogo} id="bang-logo"></Image>
                         </Menu.Item>
                         <Menu.Menu position="right">
                             <Menu.Item>
