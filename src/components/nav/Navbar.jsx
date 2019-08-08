@@ -26,20 +26,6 @@ class Navbar extends Component {
                         <Menu.Item as='a' onClick={() => this.props.history.push("/")} className="nav-logo-container">
                             <Image src={bangazonLogo} id="bang-logo"></Image>
                         </Menu.Item>
-<<<<<<< HEAD
-                        <Menu.Item position='right'>
-                            <Dropdown item simple text='Select Data'>
-                                <Dropdown.Menu>
-                                    <Dropdown.Item as='a' href='/'>
-                                        Item 1
-                                    </Dropdown.Item>
-                                    <DropdownItem as='a' href='/Orders'>
-                                        Orders
-                                    </DropdownItem>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </Menu.Item>
-=======
                         <Menu.Menu position="right">
                             <Menu.Item>
                                 <Dropdown item simple text='Select Data'>
@@ -50,6 +36,9 @@ class Navbar extends Component {
                                         <Dropdown.Item as='a' onClick={() => this.props.history.push("/customers")}>
                                             Customers
                                         </Dropdown.Item>
+                                        <DropdownItem as='a' onClick={() => this.props.history.push("/Orders")}>
+                                            Orders
+                                        </DropdownItem> 
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </Menu.Item>
@@ -63,7 +52,6 @@ class Navbar extends Component {
 
                             />
                         </Menu.Menu>
->>>>>>> master
                     </Container>
                 </Menu>
                 <LoginModal isVisible={this.state.isModalVisible} hide={this.hide}/>
