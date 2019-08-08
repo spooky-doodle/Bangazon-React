@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Dropdown, Container } from 'semantic-ui-react'
+import { Menu, Dropdown, Container, DropdownItem } from 'semantic-ui-react'
 import './navbar.css'
 
 export default class Navbar extends Component {
@@ -17,6 +17,9 @@ export default class Navbar extends Component {
                                     <Dropdown.Item as='a' href='/'>
                                         Item 1
                                     </Dropdown.Item>
+                                    <DropdownItem as='a' href='/Orders'>
+                                        Orders
+                                    </DropdownItem>
                                 </Dropdown.Menu>
                             </Dropdown>
                         </Menu.Item>

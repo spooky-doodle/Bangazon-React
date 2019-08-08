@@ -15,7 +15,7 @@ with the following methods:
 const baseURL = 'http://localhost:5000/api';
 
 export const Products = new Endpoint(`${baseURL}/products`);
-export const Orders = new Endpoint(`${baseURL}/orders`);
+export const Orders = new Endpoint(`${baseURL}/orders?_include=products`);
 export const Employees = new Endpoint(`${baseURL}/employees`);
 export const Customers = new Endpoint(`${baseURL}/customers`);
 
