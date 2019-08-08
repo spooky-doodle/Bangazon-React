@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
+import { Route, Redirect } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css'
 import "./index.css";
 import Bangazon from "./Bangazon";
@@ -13,3 +14,4 @@ ReactDOM.render(
     </Router>,
     document.getElementById("root")
 );
+
